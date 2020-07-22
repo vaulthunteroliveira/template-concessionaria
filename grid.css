@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "cabecalho      cabecalho"
+        "menulateral    conteudo"
+        "rodape         rodape";  
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 120px 1fr 60px;
+
+  
+}
+
+
+.cabecalho {
+    grid-area: cabecalho;
+    background: linear-gradient(to bottom, #57c1eb 0%, #246fa8 100%);
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.75);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.menulateral {
+    grid-area: menulateral;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 20px;
+}
+
+.rodape {
+    grid-area: rodape;
+    background-color: #57c1eb;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    background-color: #ddd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grupo{
+    font-weight: bold;
+    margin: 20px;
+}
+
+.subgrupo {
+    margin: 40px;
+}
+
+.cartao {
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.25);
+    margin-bottom:20px;
+    margin-right: 10px;
+}
+
+.titulo {
+    font-size: 1.8rem;
+} 
+
+.descricao {
+    height: 30px;
+    margin-bottom: 0;
+}
